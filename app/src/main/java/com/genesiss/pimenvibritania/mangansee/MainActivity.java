@@ -52,15 +52,21 @@ public class MainActivity extends AppCompatActivity {
         switch (id){
 
             case R.id.option1:
-                Intent m = new Intent(MainActivity.this, MenuActivity.class);
-                startActivity(m);
+                Intent h = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(h);
                 break;
             case R.id.option2:
+                Intent m = new Intent(getApplicationContext(), MenuActivity.class);
+                startActivity(m);
+                break;
+
+            case R.id.option3:
                 String phoneNumber = String.format("tel: %s", "085723660012");
                 Intent dialIntent = new Intent(Intent.ACTION_DIAL);
                 dialIntent.setData(Uri.parse(phoneNumber));
                 startActivity(dialIntent);
-            case R.id.option3:
+                break;
+            case R.id.option4:
                 finish();
                 moveTaskToBack(true);
                 break;

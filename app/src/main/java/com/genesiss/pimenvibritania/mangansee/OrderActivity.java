@@ -1,8 +1,11 @@
 package com.genesiss.pimenvibritania.mangansee;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -28,4 +31,12 @@ public class OrderActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), ThanksActivity.class);
         startActivity(i);
     }
+
+    @OnClick(R.id.btnBack)
+    public void btnBack(){
+        Intent i = new Intent(getApplicationContext(), MenuActivity.class);
+        startActivity(i);
+    }
+
+
 }
