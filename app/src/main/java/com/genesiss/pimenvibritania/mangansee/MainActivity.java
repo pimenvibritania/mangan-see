@@ -56,7 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(m);
                 break;
             case R.id.option2:
-                Toast.makeText(this, "CLICKED", Toast.LENGTH_SHORT);
+                String phoneNumber = String.format("tel: %s", "085723660012");
+                Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+                dialIntent.setData(Uri.parse(phoneNumber));
+                startActivity(dialIntent);
+            case R.id.option3:
+                finish();
+                moveTaskToBack(true);
                 break;
         }
 
